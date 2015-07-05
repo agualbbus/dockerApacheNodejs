@@ -1,4 +1,4 @@
-FROM tutum/apache-php
+FROM tutum/apache-php:latest
 
 RUN apt-get update &&\
 
@@ -18,6 +18,8 @@ RUN apt-get update &&\
 #COPY /wp-gulp-cron.sh /bin
 
 ENV LANG="en_US.UTF-8"
+
+ENV ALLOW_OVERRIDE=null
 
 # Set working directory
 WORKDIR /app
